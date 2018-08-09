@@ -1,2 +1,12 @@
 {"level":"INFO","timestamp":"2018-08-09 22:47:13.932","file":"api_server/main.go:53","msg":"Start to listening the incoming requests on http address: :8888"}
 {"level":"INFO","timestamp":"2018-08-09 22:47:13.936","file":"api_server/main.go:50","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 22:57:36.910","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:57:41.765","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:57:46.226","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:57:49.478","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:57:56.522","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:58:00.638","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:58:14.315","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 22:58:22.022","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-09 23:24:39.998","file":"api_server/main.go:58","msg":"Start to listening the incoming requests on http address: :8888"}
+{"level":"INFO","timestamp":"2018-08-09 23:24:39.999","file":"api_server/main.go:55","msg":"The router has been deployed successfully."}
