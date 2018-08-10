@@ -5,6 +5,7 @@ import (
 	"go_projects/api_server/handler/sd"
 	"go_projects/api_server/router/middleware"
 	"net/http"
+	"go_projects/api_server/handler/user"
 )
 
 /*
@@ -26,7 +27,13 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		c.String(http.StatusNotFound, "The incorrect API route")
 	})
 
-	// 健康检查handler
+	// 用户路由分组
+	u := g.Group("/v1/user")
+	{
+		u.POST("", user.Create)
+	}
+
+	// 健康检查路由分组，类似Flask蓝图形式，加前缀
 	svcd := g.Group("/sd")
 	{
 		svcd.GET("/health", sd.HealthCheck)
