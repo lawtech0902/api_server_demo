@@ -3,14 +3,14 @@ package main
 import (
 	"errors"
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"go_projects/api_server/config"
+	"go_projects/api_server/model"
 	"go_projects/api_server/router"
-	"github.com/lexkong/log"
 	"net/http"
 	"time"
-	"go_projects/api_server/model"
 )
 
 /*

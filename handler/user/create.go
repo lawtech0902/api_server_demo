@@ -1,11 +1,12 @@
 package user
 
 import (
-	"github.com/gin-gonic/gin"
-	"net/http"
-	"go_projects/api_server/pkg/errno"
-	"github.com/lexkong/log"
 	"fmt"
+
+	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
+	"go_projects/api_server/handler"
+	"go_projects/api_server/pkg/errno"
 )
 
 /*
@@ -14,34 +15,37 @@ __date__ = '2018/8/10 上午11:38'
 */
 
 func Create(c *gin.Context) {
-	var (
-		r struct {
-			Username string `json:"username"`
-			Password string `json:"password"`
-		}
-		err error
-	)
+	var r CreateRequest
 
 	if err := c.Bind(&r); err != nil {
-		c.JSON(http.StatusOK, gin.H{"error": errno.ErrBind}) // 返回json格式的response
+		handler.SendResponse(c, errno.ErrBind, nil)
 		return
 	}
 
-	log.Debugf("username is [%s], password is [%s]", r.Username, r.Password)
-	if r.Username == "" {
-		err = errno.New(errno.ErrUserNotFound, fmt.Errorf("username can not found in db: xx.xx.xx.xx")).
-			Add("This is add message.")
-		log.Errorf(err, "Get an error")
-	}
+	admin2 := c.Param("username")
+	log.Infof("URL username: %s", admin2)
 
-	if errno.IsErrUserNotFound(err) {
-		log.Debug("err type is ErrUserNotFound")
+	desc := c.Query("desc")
+	log.Infof("URL key param desc: %s", desc)
+
+	contentType := c.GetHeader("Content-Type")
+	log.Infof("Header Content-Type: %s", contentType)
+
+	log.Debugf("username is: [%s], password is [%s]", r.Username, r.Password)
+	if r.Username == "" {
+		handler.SendResponse(c, errno.New(errno.ErrUserNotFound, fmt.Errorf("username can not found in db: xx.xx.xx.xx")), nil)
+		return
 	}
 
 	if r.Password == "" {
-		err = fmt.Errorf("password is empty")
+		handler.SendResponse(c, fmt.Errorf("password is empty"), nil)
+		return
 	}
 
-	code, message := errno.Decode(err)
-	c.JSON(http.StatusOK, gin.H{"code": code, "message": message})
+	rsp := CreateResponse{
+		Username: r.Username,
+	}
+
+	// Show the user information.
+	handler.SendResponse(c, nil, rsp)
 }

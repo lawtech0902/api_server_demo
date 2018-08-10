@@ -17,3 +17,13 @@
 {"level":"ERROR","timestamp":"2018-08-10 12:35:40.963","file":"user/create.go:34","msg":"Get an error","data":{"error":"Err - code: 20102, message: The user was not found. This is add message., error: username can not found in db: xx.xx.xx.xx"}}
 {"level":"DEBUG","timestamp":"2018-08-10 12:35:40.963","file":"user/create.go:38","msg":"err type is ErrUserNotFound"}
 {"level":"DEBUG","timestamp":"2018-08-10 12:39:07.779","file":"user/create.go:30","msg":"username is [admin], password is [admin]"}
+{"level":"INFO","timestamp":"2018-08-10 17:46:47.222","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-10 17:46:53.726","file":"api_server/main.go:58","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-10 17:46:53.727","file":"api_server/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-10 17:48:11.086","file":"api_server/main.go:58","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-10 17:48:11.087","file":"api_server/main.go:70","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-10 17:48:12.091","file":"api_server/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-10 17:48:41.601","file":"user/create.go:26","msg":"URL username: admin2"}
+{"level":"INFO","timestamp":"2018-08-10 17:48:41.601","file":"user/create.go:29","msg":"URL key param desc: test"}
+{"level":"INFO","timestamp":"2018-08-10 17:48:41.601","file":"user/create.go:32","msg":"Header Content-Type: application/json"}
+{"level":"DEBUG","timestamp":"2018-08-10 17:48:41.601","file":"user/create.go:34","msg":"username is: [admin], password is [admin]"}
