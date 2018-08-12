@@ -4,6 +4,10 @@ name: apiserver                  # API Server的名字
 url: http://127.0.0.1:8080       # pingServer函数请求的API服务器的ip:port
 max_ping_count: 10               # pingServer函数尝试的次数...
 jwt_secret: Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5 # jwt Signature secret 用于对编码内容进行加密
+tls:
+  addr: :8081
+  cert: conf/server.crt
+  key: conf/server.key
 log:
   writers: file,stdout           # 输出位置，有2个可选项：file,stdout。
   logger_level: DEBUG            # 日志级别，DEBUG, INFO, WARN, ERROR, FATAL

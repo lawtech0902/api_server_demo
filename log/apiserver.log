@@ -72,3 +72,13 @@
 {"level":"INFO","timestamp":"2018-08-12 22:10:07.272","file":"middleware/logging.go:89","msg":"82.157ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
 {"level":"INFO","timestamp":"2018-08-12 22:13:16.607","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"74463abb-efab-4028-b9fe-d1ded0d2bdc2"}}
 {"level":"INFO","timestamp":"2018-08-12 22:13:16.697","file":"middleware/logging.go:89","msg":"90.48ms       | 127.0.0.1    | POST /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2018-08-12 22:28:49.757","file":"api_server/main.go:70","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-12 22:28:49.759","file":"api_server/main.go:65","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2018-08-12 22:28:49.759","file":"api_server/main.go:82","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-12 22:28:50.764","file":"api_server/main.go:57","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-12 22:29:21.921","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"82cd7a4c-77da-4d2e-8baf-d9b953553e1c"}}
+{"level":"INFO","timestamp":"2018-08-12 22:29:21.922","file":"middleware/logging.go:89","msg":"1.267ms       | 127.0.0.1    | POST /v1/user | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:30:42.604","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"b02696b3-3320-4a70-af83-7da65f793a47"}}
+{"level":"INFO","timestamp":"2018-08-12 22:30:42.604","file":"middleware/logging.go:89","msg":"614µs         | 127.0.0.1    | POST /v1/user | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:31:36.014","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":"21c7a4dd-e7c3-4d1f-8184-1d13febaede4"}}
+{"level":"INFO","timestamp":"2018-08-12 22:31:36.050","file":"middleware/logging.go:89","msg":"37.293ms      | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}
