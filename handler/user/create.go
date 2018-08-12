@@ -2,12 +2,12 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/lexkong/log/lager"
 	"go_projects/api_server/handler"
 	"go_projects/api_server/model"
 	"go_projects/api_server/pkg/errno"
 	"go_projects/api_server/util"
-	"github.com/lexkong/log"
 )
 
 /*

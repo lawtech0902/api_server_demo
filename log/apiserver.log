@@ -36,3 +36,13 @@
 {"level":"INFO","timestamp":"2018-08-12 17:10:46.644","file":"user/update.go:20","msg":"Update function called.","data":{"X-Request-Id":""}}
 {"level":"INFO","timestamp":"2018-08-12 17:10:56.076","file":"user/get.go:19","msg":"Update function called.","data":{"X-Request-Id":""}}
 {"level":"INFO","timestamp":"2018-08-12 17:11:15.091","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2018-08-12 17:14:43.945","file":"api_server/main.go:58","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-12 17:14:43.950","file":"api_server/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-12 17:14:49.651","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":""}}
+{"level":"INFO","timestamp":"2018-08-12 21:21:07.165","file":"api_server/main.go:60","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-12 21:21:07.167","file":"api_server/main.go:72","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-12 21:21:08.175","file":"api_server/main.go:57","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-12 21:21:32.827","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":"d49f2909-1b0e-4375-a3d3-01e2c2d2f27d"}}
+{"level":"INFO","timestamp":"2018-08-12 21:21:32.871","file":"middleware/logging.go:89","msg":"42.677ms      | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2018-08-12 21:22:14.328","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":"b3903a9c-e187-4256-8b85-b57cc07595a0"}}
+{"level":"INFO","timestamp":"2018-08-12 21:22:14.341","file":"middleware/logging.go:89","msg":"13.019ms      | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}
