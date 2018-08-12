@@ -46,3 +46,29 @@
 {"level":"INFO","timestamp":"2018-08-12 21:21:32.871","file":"middleware/logging.go:89","msg":"42.677ms      | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}
 {"level":"INFO","timestamp":"2018-08-12 21:22:14.328","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":"b3903a9c-e187-4256-8b85-b57cc07595a0"}}
 {"level":"INFO","timestamp":"2018-08-12 21:22:14.341","file":"middleware/logging.go:89","msg":"13.019ms      | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2018-08-12 21:25:23.226","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-12 21:25:58.317","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-12 21:26:11.698","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-12 21:26:24.292","file":"config/config.go:77","msg":"Config file changed: /Users/lawtech/go/src/go_projects/api_server/conf/config.yaml"}
+{"level":"INFO","timestamp":"2018-08-12 21:49:39.494","file":"api_server/main.go:60","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-12 21:49:39.495","file":"api_server/main.go:72","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-12 21:49:40.499","file":"api_server/main.go:57","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-12 22:03:35.040","file":"middleware/logging.go:89","msg":"100.42ms      | 127.0.0.1    | POST /login | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2018-08-12 22:04:01.953","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"1303a319-1d69-4efd-b70f-e55ab31d1219"}}
+{"level":"ERROR","timestamp":"2018-08-12 22:04:02.055","file":"middleware/logging.go:81","msg":"response body can not unmarshal to model.Response struct, body: `{\"code\":20103,\"message\":\"The token was invalid.\",\"data\":null}{\"code\":0,\"message\":\"OK\",\"data\":{\"username\":\"user1\"}}`","data":{"error":"invalid character '{' after top-level value"}}
+{"level":"INFO","timestamp":"2018-08-12 22:04:02.055","file":"middleware/logging.go:89","msg":"101.372ms     | 127.0.0.1    | POST /v1/user | {code: 10001, message: invalid character '{' after top-level value}"}
+{"level":"INFO","timestamp":"2018-08-12 22:04:41.120","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"41fb7740-9272-4162-9bc7-ae6c91969a9f"}}
+{"level":"INFO","timestamp":"2018-08-12 22:04:41.209","file":"middleware/logging.go:89","msg":"92.174ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:05:26.205","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"563ba5be-fa6a-4013-9e5e-eef9cc5e5d1b"}}
+{"level":"INFO","timestamp":"2018-08-12 22:05:26.288","file":"middleware/logging.go:89","msg":"83.57ms       | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:06:05.283","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"77394a99-3149-404e-9a24-a1b52838d8b5"}}
+{"level":"INFO","timestamp":"2018-08-12 22:06:05.377","file":"middleware/logging.go:89","msg":"94.956ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:08:37.214","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"124b7a03-395a-455a-8222-9a004bf96cb7"}}
+{"level":"INFO","timestamp":"2018-08-12 22:08:37.298","file":"middleware/logging.go:89","msg":"84.194ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:09:43.195","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":"186d3382-a4d2-4f12-b259-54e85c5505fa"}}
+{"level":"ERROR","timestamp":"2018-08-12 22:09:43.216","file":"middleware/logging.go:81","msg":"response body can not unmarshal to model.Response struct, body: `{\"code\":20103,\"message\":\"The token was invalid.\",\"data\":null}{\"code\":0,\"message\":\"OK\",\"data\":{\"total_count\":2,\"user_list\":[{\"id\":3,\"username\":\"user1\",\"say_hello\":\"Hello 5DxQ6wcmg\",\"password\":\"$2a$10$KfuyCFxkk9bVlPE0ghoDMeakPZYPcacHQBZQyzoDRDWrN4nixipD2\",\"created_at\":\"2018-08-12 22:04:02\",\"updated_at\":\"2018-08-12 22:04:02\"},{\"id\":0,\"username\":\"admin\",\"say_hello\":\"Hello pvbQ6Qcig\",\"password\":\"$2a$10$veGcArz47VGj7l9xN7g2iuT9TF21jLI1YGXarGzvARNdnt4inC9PG\",\"created_at\":\"2018-05-28 00:25:33\",\"updated_at\":\"2018-05-28 00:25:33\"}]}}`","data":{"error":"invalid character '{' after top-level value"}}
+{"level":"INFO","timestamp":"2018-08-12 22:09:43.216","file":"middleware/logging.go:89","msg":"21.193ms      | 127.0.0.1    | GET /v1/user | {code: 10001, message: invalid character '{' after top-level value}"}
+{"level":"INFO","timestamp":"2018-08-12 22:10:07.190","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"4ef58db5-5bd3-46bf-a952-c1a142d8944d"}}
+{"level":"INFO","timestamp":"2018-08-12 22:10:07.272","file":"middleware/logging.go:89","msg":"82.157ms      | 127.0.0.1    | POST /v1/user | {code: 20002, message: Database error.}"}
+{"level":"INFO","timestamp":"2018-08-12 22:13:16.607","file":"user/create.go:20","msg":"User Create function called.","data":{"X-Request-Id":"74463abb-efab-4028-b9fe-d1ded0d2bdc2"}}
+{"level":"INFO","timestamp":"2018-08-12 22:13:16.697","file":"middleware/logging.go:89","msg":"90.48ms       | 127.0.0.1    | POST /v1/user | {code: 0, message: OK}"}
