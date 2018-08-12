@@ -2,34 +2,32 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/lexkong/log"
 	"github.com/lexkong/log/lager"
 	"go_projects/api_server/handler"
 	"go_projects/api_server/model"
 	"go_projects/api_server/pkg/errno"
 	"go_projects/api_server/util"
-	"github.com/lexkong/log"
+	"strconv"
 )
 
 /*
 __author__ = 'lawtech'
-__date__ = '2018/8/10 上午11:38'
+__date__ = '2018/8/12 下午4:14'
 */
 
-// 创建user
-func Create(c *gin.Context) {
-	log.Info("User Create function called.", lager.Data{"X-Request-Id": util.GetReqId(c)})
+func Update(c *gin.Context) {
+	log.Info("Update function called.", lager.Data{"X-Request-Id": util.GetReqId(c)})
 
-	var r CreateRequest
+	userId, _ := strconv.Atoi(c.Param("id"))
 
-	if err := c.Bind(&r); err != nil {
+	// 绑定用户数据
+	var u model.UserModel
+	if err := c.Bind(&u); err != nil {
 		handler.SendResponse(c, errno.ErrBind, nil)
-		return
 	}
 
-	u := model.UserModel{
-		Username: r.Username,
-		Password: r.Password,
-	}
+	u.Id = uint64(userId)
 
 	// 验证
 	if err := u.Validate(); err != nil {
@@ -37,21 +35,17 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	// 加密password
+	// 加密密码
 	if err := u.Encrypt(); err != nil {
 		handler.SendResponse(c, errno.ErrEncrypt, nil)
 		return
 	}
 
-	// 将user插入数据库
-	if err := u.CreateUser(); err != nil {
+	// 保存修改
+	if err := u.UpdateUser(); err != nil {
 		handler.SendResponse(c, errno.ErrDatabase, nil)
 		return
 	}
 
-	resp := CreateResponse{
-		Username: r.Username,
-	}
-
-	handler.SendResponse(c, nil, resp)
+	handler.SendResponse(c, nil, nil)
 }

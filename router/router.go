@@ -30,7 +30,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// 用户路由分组
 	u := g.Group("/v1/user")
 	{
-		u.POST("/:username", user.Create)
+		u.POST("", user.Create)       // 创建用户
+		u.DELETE("/:id", user.Delete) // 删除用户
+		u.PUT("/:id", user.Update)    // 更新用户
+		u.GET("", user.List)          // 用户列表
+		u.GET("/:username", user.Get) // 获取指定用户的详细信息
 	}
 
 	// 健康检查路由分组，类似Flask蓝图形式，加前缀
