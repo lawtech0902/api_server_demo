@@ -2,15 +2,19 @@ package main
 
 import (
 	"errors"
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin/json"
 	"github.com/lexkong/log"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"go_projects/api_server/config"
 	"go_projects/api_server/model"
+	v "go_projects/api_server/pkg/version"
 	"go_projects/api_server/router"
 	"go_projects/api_server/router/middleware"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -20,11 +24,24 @@ __date__ = '2018/8/9 下午6:00'
 */
 
 var (
-	cfg = pflag.StringP("config", "c", "", "apiserver config file path.")
+	cfg     = pflag.StringP("config", "c", "", "apiserver config file path.")
+	version = pflag.BoolP("version", "v", false, "show version info")
 )
 
 func main() {
 	pflag.Parse()
+
+	if *version {
+		v := v.Get()
+		marshalled, err := json.MarshalIndent(&v, "", "  ")
+		if err != nil {
+			fmt.Printf("%v\n", err)
+			os.Exit(1)
+		}
+
+		fmt.Println(string(marshalled))
+		return
+	}
 
 	// init config
 	if err := config.Init(*cfg); err != nil {
