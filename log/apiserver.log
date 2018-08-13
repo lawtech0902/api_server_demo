@@ -82,3 +82,10 @@
 {"level":"INFO","timestamp":"2018-08-12 22:30:42.604","file":"middleware/logging.go:89","msg":"614µs         | 127.0.0.1    | POST /v1/user | {code: 10002, message: Error occurred while binding the request body to the struct.}"}
 {"level":"INFO","timestamp":"2018-08-12 22:31:36.014","file":"user/list.go:19","msg":"Update function called.","data":{"X-Request-Id":"21c7a4dd-e7c3-4d1f-8184-1d13febaede4"}}
 {"level":"INFO","timestamp":"2018-08-12 22:31:36.050","file":"middleware/logging.go:89","msg":"37.293ms      | 127.0.0.1    | GET /v1/user | {code: 0, message: OK}"}
+{"level":"INFO","timestamp":"2018-08-13 15:51:56.962","file":"api_server/main.go:87","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-13 15:51:56.962","file":"api_server/main.go:82","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2018-08-13 15:51:56.963","file":"api_server/main.go:99","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 15:51:57.971","file":"api_server/main.go:74","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 15:52:15.098","file":"api_server/main.go:82","msg":"Start to listening the incoming requests on https address: :8081"}
+{"level":"INFO","timestamp":"2018-08-13 15:52:15.098","file":"api_server/main.go:87","msg":"Start to listening the incoming requests on http address: :8080"}
+{"level":"INFO","timestamp":"2018-08-13 15:52:15.099","file":"api_server/main.go:74","msg":"The router has been deployed successfully."}
