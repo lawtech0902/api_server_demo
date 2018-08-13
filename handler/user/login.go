@@ -2,10 +2,10 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	"go_projects/api_server/model"
 	"go_projects/api_server/handler"
-	"go_projects/api_server/pkg/errno"
+	"go_projects/api_server/model"
 	"go_projects/api_server/pkg/auth"
+	"go_projects/api_server/pkg/errno"
 	"go_projects/api_server/pkg/token"
 )
 

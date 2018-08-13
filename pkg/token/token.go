@@ -2,11 +2,11 @@ package token
 
 import (
 	"errors"
+	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 	"time"
-	"fmt"
 )
 
 /*
